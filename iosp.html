@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iosp ioslides plus</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <meta name="generator" content="pandoc" />
+
+
+
+  <meta name="date" content="2016-11-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <base target="_blank">
+
+  <script type="text/javascript">
+    var SLIDE_CONFIG = {
+      // Slide settings
+      settings: {
+                title: '<a href="https://github.com/koncina/iosp"><code>iosp</code></a> ioslides plus',
+                        useBuilds: true,
+        usePrettify: true,
+        enableSlideAreas: true,
+        enableTouch: true,
+                        favIcon: 'iosp_files/logo.png',
+              },
+
+      // Author information
+      presenters: [
+            {
+        name:  'Eric Koncina, Aurélien Ginolhac' ,
+        company: '',
+        gplus: '',
+        twitter: '',
+        www: '',
+        github: ''
+      },
+            ]
+    };
+  </script>
+
+  <style type="text/css">
+
+    b, strong {
+      font-weight: bold;
+    }
+
+    em {
+      font-style: italic;
+    }
+
+    slides > slide {
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .auto-fadein {
+      -webkit-transition: opacity 0.6s ease-in;
+      -webkit-transition-delay: 0.4s;
+      -moz-transition: opacity 0.6s ease-in 0.4s;
+      -o-transition: opacity 0.6s ease-in 0.4s;
+      transition: opacity 0.6s ease-in 0.4s;
+      opacity: 0;
+    }
+
+    slides > slide:not(.nobackground):before {
+      font-size: 12pt;
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      left: 60px;
+      background: url(iosp_files/logo.png) no-repeat 0 50%;
+      -webkit-background-size: 30px 30px;
+      -moz-background-size: 30px 30px;
+      -o-background-size: 30px 30px;
+      background-size: 30px 30px;
+      padding-left: 40px;
+      height: 30px;
+      line-height: 1.9;
+    }
+  </style>
+
+
+  <link href="libs/ioslides-13.5.1/fonts/fonts.css" rel="stylesheet" />
+  <link href="libs/ioslides-13.5.1/theme/css/default.css" rel="stylesheet" />
+  <link href="libs/ioslides-13.5.1/theme/css/phone.css" rel="stylesheet" />
+  <script src="libs/ioslides-13.5.1/js/modernizr.custom.45394.js"></script>
+  <script src="libs/ioslides-13.5.1/js/prettify/prettify.js"></script>
+  <script src="libs/ioslides-13.5.1/js/prettify/lang-yaml.js"></script>
+  <script src="libs/ioslides-13.5.1/js/hammer.js"></script>
+  <script src="libs/ioslides-13.5.1/js/slide-controller.js"></script>
+  <script src="libs/ioslides-13.5.1/js/slide-deck.js"></script>
+  <link href="libs/iosp-0.1/css/iosp.css" rel="stylesheet" />
+  <script src="libs/iosp-0.1/js/lang-r.js"></script>
+
+</head>
+
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="title-slide segue nobackground">
+        <aside class="gdbar"><img src="iosp_files/logo.png"></aside>
+        <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+            <p style="margin-top: 6px; margin-left: -2px;">11/29/2016</p>
+          </hgroup>
+  </slide>
+
+<slide class=''><hgroup><h2>bootstrap layout</h2></hgroup><article  id="bootstrap-layout" class="smaller ">
+
+<p>A row is defined with <code>&lt;div class = &quot;row stretch&quot;&gt;</code>. <strong>Strech</strong> so all defined box have the same height</p>
+
+<div class="row stretch">
+<div class="col-6 box bg-red">
+<h3>Warning</h3>
+
+<p>based on bootstrap, this a box of width 6</p>
+
+<p><code>&lt;div class = &quot;col-6 box bg-red &quot;&gt;</code></p></div>
+
+<div class="col-6 box bg-green">
+<h3>green</h3>
+
+<p>another box of width 6</p>
+
+<h4>green is the color with 4 hashes</h4>
+
+<p><strong>bold</strong> : <em>italic</em></p></div></div>
+
+<div class="row">
+<div class="col-5 box bg-yellow">
+<h3>3 hashes<code>###</code> makes a title</h3>
+
+<p>here is a class &quot;col-5 box bg-yellow&quot;</p></div>
+
+<div class="col-5 box bg-blue">
+<h3>blue note</h3>
+
+<p>class &quot;col-5 box bg-blue&quot;, summing to 12 is optional</p></div></div>
+
+Below, defined another <code>row</code>
+
+<div class="row">
+<div class="col-10 box">
+<p>A simple box, no background <code>&lt;div class = &quot;col-10 box&quot;&gt;</code></p></div></div>
+
+<div class="row">
+<div class="col-3">
+</div>
+
+<div class="col-9">
+<p>before a <code>div class = &quot;col-3</code> and here a <code>div class = &quot;col-9&quot;</code></p></div></div>
+
+</article></slide><slide class=''><hgroup><h2>R code </h2><h3> subtitle on the rigth to save space</h3></hgroup><article  id="r-code-subtitle-on-the-rigth-to-save-space" class="smaller ">
+
+<div class="row stretch">
+<div class="col-7 box bg-yellow">
+<h3>fav regression, yellow bg</h3>
+
+<pre class = 'prettyprint lang-r'>lm(mpg ~ poly(wt, 2), data = mtcars)</pre>
+
+<pre >## 
+## Call:
+## lm(formula = mpg ~ poly(wt, 2), data = mtcars)
+## 
+## Coefficients:
+##  (Intercept)  poly(wt, 2)1  poly(wt, 2)2  
+##       20.091       -29.116         8.636</pre>
+
+<p>Syntax is highligthed <em>à la</em> <a href='https://www.rstudio.com/' title=''>Rstudio</a></p></div>
+
+<div class="col-5 box">
+<h3>plot in a box</h3>
+
+<pre class = 'prettyprint lang-r'>library(tidyverse)
+ggplot(mtcars, aes(mpg, wt)) +
+  geom_point() +
+  geom_smooth(method = &quot;lm&quot;, 
+              formula = y ~ poly(x, 2))</pre>
+
+<p><img src='iosp_files/figure-html/unnamed-chunk-2-1.png' title=''/><!-- --></p></div></div>
+
+</article></slide><slide class=''><hgroup><h2>Install from github {.vs1} (add 1 vertical space with <code>{.vs1}</code>)</h2></hgroup><article  id="install-from-github-.vs1-add-1-vertical-space-with-.vs1" class="smaller ">
+
+<h3>R package</h3>
+
+<p>by <a href='https://github.com/koncina' title=''>Eric Koncina</a> install with <a href='https://cran.r-project.org/web/packages/devtools/index.html' title=''><code>devtools</code></a>:</p>
+
+<pre class = 'prettyprint lang-r'># install.packages(&quot;devtools&quot;)
+devtools::install_github(&quot;koncina/iosp&quot;)</pre>
+
+<h3>YAML header for this presentation</h3>
+
+<pre class = 'prettyprint lang-r'>---
+iosp::ioslides_plus:
+  fig_height: 5
+  fig_width: 6
+  keep_md: no
+  logo: img/uni.png
+  smaller: yes
+  widescreen: yes
+  self_contained: false
+  lib_dir: libs
+  fig_retina: null
+---</pre>
+
+</div>
+
+</article></slide><slide class=''><hgroup><h2>session info</h2></hgroup><article  id="session-info" class="smaller ">
+
+<pre class = 'prettyprint lang-r'>devtools::session_info()</pre>
+
+<pre >## Session info --------------------------------------------------------------</pre>
+
+<pre >##  setting  value                       
+##  version  R version 3.3.2 (2016-10-31)
+##  system   x86_64, darwin15.6.0        
+##  ui       unknown                     
+##  language (EN)                        
+##  collate  en_US.UTF-8                 
+##  tz       Europe/Madrid               
+##  date     2016-11-29</pre>
+
+<pre >## Packages ------------------------------------------------------------------</pre>
+
+<pre >##  package    * version    date       source                          
+##  assertthat   0.1        2013-12-06 CRAN (R 3.3.0)                  
+##  backports    1.0.4      2016-10-24 CRAN (R 3.3.2)                  
+##  colorspace   1.3-1      2016-11-18 CRAN (R 3.3.2)                  
+##  DBI          0.5-1      2016-09-10 CRAN (R 3.3.1)                  
+##  devtools     1.12.0     2016-06-24 CRAN (R 3.3.0)                  
+##  digest       0.6.10     2016-08-02 CRAN (R 3.3.1)                  
+##  dplyr      * 0.5.0      2016-06-24 CRAN (R 3.3.0)                  
+##  evaluate     0.10       2016-10-11 CRAN (R 3.3.1)                  
+##  ggplot2    * 2.2.0      2016-11-11 CRAN (R 3.3.2)                  
+##  gtable       0.2.0      2016-02-26 CRAN (R 3.3.0)                  
+##  htmltools    0.3.5      2016-03-21 CRAN (R 3.3.0)                  
+##  iosp         0.1.0      2016-11-28 Github (koncina/iosp@3498b39)   
+##  knitr        1.15.1     2016-11-22 CRAN (R 3.3.2)                  
+##  labeling     0.3        2014-08-23 CRAN (R 3.3.0)                  
+##  lazyeval     0.2.0.9000 2016-07-06 Github (hadley/lazyeval@c155c3d)
+##  magrittr     1.5        2014-11-22 CRAN (R 3.3.0)                  
+##  memoise      1.0.0      2016-01-29 CRAN (R 3.3.0)                  
+##  munsell      0.4.3      2016-02-13 CRAN (R 3.3.0)                  
+##  plyr         1.8.4      2016-06-08 CRAN (R 3.3.0)                  
+##  purrr      * 0.2.2      2016-06-18 CRAN (R 3.3.0)                  
+##  R6           2.2.0      2016-10-05 CRAN (R 3.3.1)                  
+##  Rcpp         0.12.8     2016-11-17 CRAN (R 3.3.2)                  
+##  readr      * 1.0.0      2016-08-03 CRAN (R 3.3.1)                  
+##  rmarkdown    1.2        2016-11-21 cran (@1.2)                     
+##  rprojroot    1.1        2016-10-29 CRAN (R 3.3.2)                  
+##  scales       0.4.1      2016-11-09 CRAN (R 3.3.2)                  
+##  stringi      1.1.2      2016-10-01 CRAN (R 3.3.1)                  
+##  stringr      1.1.0      2016-08-19 CRAN (R 3.3.1)                  
+##  tibble     * 1.2        2016-08-26 CRAN (R 3.3.1)                  
+##  tidyr      * 0.6.0.9000 2016-11-22 Github (hadley/tidyr@5eb9e9b)   
+##  tidyverse  * 1.0.0      2016-09-09 CRAN (R 3.3.1)                  
+##  withr        1.0.2      2016-06-20 CRAN (R 3.3.0)                  
+##  yaml         2.1.14     2016-11-12 CRAN (R 3.3.2)</pre></article></slide>
+
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<!-- map slide visiblity events into shiny -->
+<script>
+  (function() {
+    if (window.jQuery) {
+       window.jQuery(document).on('slideleave', function(e) {
+         window.jQuery(e.target).trigger('hidden');
+      });
+       window.jQuery(document).on('slideenter', function(e) {
+         window.jQuery(e.target).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+</body>
+</html>

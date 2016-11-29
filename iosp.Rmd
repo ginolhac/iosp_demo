@@ -1,0 +1,128 @@
+---
+title: "[`iosp`](https://github.com/koncina/iosp) ioslides plus"
+author: "Eric Koncina, Aurélien Ginolhac"
+date: "11/29/2016"
+output:
+  iosp::ioslides_plus:
+    fig_height: 5
+    fig_width: 6
+    keep_md: no
+    logo: img/uni.png
+    smaller: yes
+    widescreen: yes
+    self_contained: false
+    lib_dir: libs
+    fig_retina: null
+---
+
+## bootstrap layout
+
+A row is defined with `<div class = "row stretch">`. **Strech** so all defined box have the same height
+
+<div class = "row stretch">
+<div class = "col-6 box bg-red ">
+### Warning
+based on bootstrap, this a box of width 6
+
+`<div class = "col-6 box bg-red ">`
+
+</div>
+<div class = "col-6 box bg-green">
+### green
+another box of width 6
+
+#### green is the color with 4 hashes
+
+**bold** : _italic_
+</div>
+</div>
+<div class = "row">
+<div class = "col-5 box bg-yellow">
+### 3 hashes`###` makes a title
+here is a class "col-5 box bg-yellow"
+</div>
+<div class = "col-5 box bg-blue">
+### blue note
+class "col-5 box bg-blue", summing to 12 is optional
+</div>
+</div>
+
+Below, defined another `row`
+<div class = "row">
+<div class = "col-10 box">
+A simple box, no background `<div class = "col-10 box">`
+</div>
+</div>
+
+<div class = "row">
+<div class = "col-3">
+</div>
+<div class = "col-9">
+before a `div class = "col-3` and here a `div class = "col-9"`
+</div>
+</div>
+
+## R code | subtitle on the rigth to save space
+
+<div class = "row stretch">
+<div class = "col-7 box bg-yellow">
+### fav regression, yellow bg
+
+```{r}
+lm(mpg ~ poly(wt, 2), data = mtcars)
+```
+
+Syntax is highligthed _à la_ [Rstudio](https://www.rstudio.com/)
+
+</div>
+<div class = "col-5 box">
+### plot in  a box 
+```{r, message = FALSE, fig.height = 3, fig.width = 3.5}
+library(tidyverse)
+ggplot(mtcars, aes(mpg, wt)) +
+  geom_point() +
+  geom_smooth(method = "lm", 
+              formula = y ~ poly(x, 2))
+```
+</div>
+</div>
+
+
+## Install from github {.vs1} (add 1 vertical space with `{.vs1}`)
+
+
+### R package 
+
+by [Eric Koncina](https://github.com/koncina) install with [`devtools`](https://cran.r-project.org/web/packages/devtools/index.html):
+
+
+```{r, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("koncina/iosp")
+```
+
+
+### YAML header for this presentation
+```{r, eval = FALSE}
+---
+iosp::ioslides_plus:
+  fig_height: 5
+  fig_width: 6
+  keep_md: no
+  logo: img/uni.png
+  smaller: yes
+  widescreen: yes
+  self_contained: false
+  lib_dir: libs
+  fig_retina: null
+---
+```
+</div>
+
+
+## session info
+
+```{r}
+devtools::session_info()
+```
+
