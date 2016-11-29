@@ -36,6 +36,7 @@ another box of width 6
 **bold** : _italic_
 </div>
 </div>
+Below, defined another `row`, no strech defined
 <div class = "row">
 <div class = "col-5 box bg-yellow">
 ### 3 hashes`###` makes a title
@@ -47,7 +48,7 @@ class "col-5 box bg-blue", summing to 12 is optional
 </div>
 </div>
 
-Below, defined another `row`
+third `row`
 <div class = "row">
 <div class = "col-10 box">
 A simple box, no background `<div class = "col-10 box">`
