@@ -106,8 +106,6 @@ devtools::install_github("koncina/iosp")
 ```{r, eval = FALSE}
 ---
 iosp::ioslides_plus:
-  fig_height: 5
-  fig_width: 6
   keep_md: no
   logo: img/uni.png
   smaller: yes
@@ -119,6 +117,9 @@ iosp::ioslides_plus:
 ```
 </div>
 
+### Rmarkdown code
+
+[here on github](https://github.com/ginolhac/iosp_demo/blob/master/iosp.Rmd)
 
 ## session info
 
